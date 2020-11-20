@@ -36,7 +36,7 @@ I test BI-LSTM-CRF networks on the Penn Treebank (POS tagging task), the table b
 For Word Representation, i used pretrained word embedding [Glove](https://nlp.stanford.edu/projects/glove/) which each word corresponds to a 100-dimentional embedding vector.
 ### <a name="results"></a> Results
 
-First, i set batch size to 64, the model is overfitting at epoch 2, then i changed batch size to 128, it was at epoch 3. Eventually, i set batch size to 256 and it reached the highest accuarcy (at word level): 98.93%.
+First, i set batch size to 64, the model was overfitting at epoch 2, then i changed batch size to 128, it was at epoch 3. Eventually, i set batch size to 256 and it reached the highest accuarcy (at word level): 98.93%.
 
 ## <a name = "reference"></a> References
 
