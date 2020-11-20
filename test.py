@@ -58,6 +58,12 @@ def predict():
     pred = model.predict(encoded_sent)
     sequence_tags = get_tags(pred, {i: t for t, i in tag_index.items()})
     print(sequence_tags[0][:len(tokens)])
+    res1 = sequence_tags[0][:len(tokens)]
+    res2 = []
+    for tok, tag in zip(tokens, res1):
+        res2.append((tok, tag))
+    print(res2)
+        
 
 if __name__ == "__main__":
     predict()
