@@ -27,7 +27,7 @@ A Tensorflow 2/Keras implementation of POS tagging task using Bidirectional Long
 ## <a name="experiments"></a> Experiments
 ### <a name="data"></a> Data
 I test BI-LSTM-CRF networks on the Penn Treebank (POS tagging task), the table below shows the size of sentences, tokens and labels for training, validation and test sets respectively
- *PTB POS* | | *POS* | 
+ *PTB POS* | |  | 
  | :--- | :--- | :--- | 
  *training* | sentence #, token # | 33458, 798284 | 
  *validation* | sentence #, token # | 6374, 151744 |  
@@ -35,13 +35,46 @@ I test BI-LSTM-CRF networks on the Penn Treebank (POS tagging task), the table b
   | | | | | 
    |  | label #  | 45 |
 ### <a name="features"></a> Features
-#### <a name="spelling"></a> Spelling Features
-#### <a name="context"></a> Context Features
 #### <a name="word"></a> Word Embedding
-#### <a name="connection"></a> Features Connection
+For Word Representation, i used pretrained word embedding [Glove](https://nlp.stanford.edu/projects/glove/) which each word corresponds to a 100-dimentional embedding vector.
 ### <a name="results"></a> Results
+
+First, i set batch size to 64, the model is overfitting at epoch 2, then i changed batch size to 128, it was at epoch 3. Eventually, i set batch size to 256 and it reached the highest accuarcy (at word level): 98.93%.
+
 ## <a name = "reference"></a> References
-My implementation is based on the following paper:
+
+My implementation is based on the following paper: 
+
 Huang, et al. ["Bidirectional LSTM-CRF Models for Sequence Tagging"](https://arxiv.org/abs/1508.01991) arXiv preprint arXiv:1508.01991 (2015).
+
 ## Usage
 ### <a name="usage"></a> Requirements
+
+- Tensorflow 2/Keras
+- Numpy
+- JSON
+- NLTK
+- argparse
+
+        $ pip install requirements
+        
+### Training and Evaluating
+
+        $ python train.py
+Output:
+
+        $ Viterbi accuracy: 98.93%
+        
+#### Graphs:
+
+Accuracy
+<img src="images/accuracy.png" width="500px" height="auto">
+
+Loss
+<img src="images/loss.png" width="500px" height="auto">
+
+### Testing
+        $ python test.py --sent "My heart is always breaking for the ghosts that haunt this room."
+Output:
+
+        $ [('My', 'prp$'), ('heart', 'nn'), ('is', 'vbz'), ('always', 'rb'), ('breaking', 'vbg'), ('for', 'in'), ('the', 'dt'), ('ghosts', 'nns'), ('that', 'wdt'), ('haunt', 'vbp'), ('this', 'dt'), ('room', 'nn'), ('.', '.')]
