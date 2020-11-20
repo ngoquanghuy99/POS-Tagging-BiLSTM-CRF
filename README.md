@@ -68,9 +68,11 @@ Output:
 #### Graphs:
 
 Accuracy
+
 <img src="images/accuracy.png" width="500px" height="auto">
 
 Loss
+
 <img src="images/loss.png" width="500px" height="auto">
 
 ### Testing
