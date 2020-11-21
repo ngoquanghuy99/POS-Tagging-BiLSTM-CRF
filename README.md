@@ -1,4 +1,4 @@
-***Note***: A standard dataset for POS tagging is the Wall Street Journal (WSJ) portion of the Penn Treebank, containing 45 different POS tags. Sections 0-18 are used for training, sections 19-21 for development, and sections 22-24 for testing. Models are evaluated based on accuracy. But I just own sections 2-21 (for training), i took 16% from it for development, and section 24 for testing. There's a little bit difference here but (I think) with this model, it would outperform SOTA results in POS tagging task! 😅 Don't you believe it?
+***Note***: A standard dataset for POS tagging is the Wall Street Journal (WSJ) portion of the Penn Treebank, containing 45 different POS tags. Sections 0-18 are used for training, sections 19-21 for development, and sections 22-24 for testing. Models are evaluated based on accuracy. But I just own sections 2-21 (for training), i took 16% from it for development, and section 24 for testing. There's a little bit difference here but (I think) with this model, it would outperform SOTA results for POS tagging task! 😅 Don't you believe it?
 
 #### Table of contents
 1. [Introduction](#introduction)
