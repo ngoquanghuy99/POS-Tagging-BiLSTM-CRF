@@ -78,4 +78,8 @@ Loss
         $ python test.py --sent "My heart is always breaking for the ghosts that haunt this room."
 Output:
 
-        $ [('My', 'prp$'), ('heart', 'nn'), ('is', 'vbz'), ('always', 'rb'), ('breaking', 'vbg'), ('for', 'in'), ('the', 'dt'), ('ghosts', 'nns'), ('that', 'wdt'), ('haunt', 'vbp'), ('this', 'dt'), ('room', 'nn'), ('.', '.')]
+        $ [('My', 'prp$'), ('heart', 'nn'), ('is', 'vbz'), 
+        ('always', 'rb'), ('breaking', 'vbg'), ('for', 'in'), 
+        ('the', 'dt'), ('ghosts', 'nns'), ('that', 'wdt'), 
+        ('haunt', 'vbp'), ('this', 'dt'), 
+        ('room', 'nn'), ('.', '.')]
