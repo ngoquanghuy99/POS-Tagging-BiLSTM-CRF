@@ -1,4 +1,4 @@
-***Note***: *A standard dataset for POS tagging is the Wall Street Journal (WSJ) portion of the Penn Treebank, containing 45 different POS tags. Sections 0-18 are used for training, sections 19-21 for development, and sections 22-24 for testing. Models are evaluated based on accuracy. But I just own sections 2-21 (for training), i took 16% from it for development, and section 24 for testing. There's a little bit difference here but (I think) with this model, it would outperform SOTA results for POS tagging task (or nearly). 
+***Note***: A standard dataset for POS tagging is the Wall Street Journal (WSJ) portion of the Penn Treebank, containing 45 different POS tags. Sections 0-18 are used for training, sections 19-21 for development, and sections 22-24 for testing. Models are evaluated based on accuracy. But I just own sections 2-21 (for training), i took 16% from it for development, and section 24 for testing. There's a little bit difference here but (I think) with this model, it would outperform SOTA results for POS tagging task (or nearly). 
 
 #### Table of contents
 1. [Introduction](#introduction)
@@ -17,7 +17,7 @@ A Tensorflow 2/Keras implementation of POS tagging task using Bidirectional Long
 - batch size: 256
 - learning rate: 0.001
 - number of epochs: 3
-- max lengh (the number of timesteps): 141
+- max length (the number of timesteps): 141
 - embedding size: 100
 - number of tags: 45
 - hidden BiLSTM layer: 1
@@ -25,7 +25,7 @@ A Tensorflow 2/Keras implementation of POS tagging task using Bidirectional Long
 - recurrent dropout: 0.01
 ## <a name="experiments"></a> Experiments
 ### <a name="data"></a> Data
-I test BI-LSTM-CRF networks on the Penn Treebank (POS tagging task), the table below shows the size of sentences, tokens and labels for training, validation and test sets respectively
+I test BI-LSTM-CRF networks on the Penn Treebank (POS tagging task), the table below shows the size of sentences, tokens and labels for training, validation and test sets respectively.
  *PTB POS* | |  | 
  | :--- | :--- | :--- | 
  *training* | sentence #, token # | 33458, 798284 | 
@@ -55,7 +55,7 @@ Huang, et al. ["Bidirectional LSTM-CRF Models for Sequence Tagging"](https://arx
 - NLTK
 - argparse
 
-        $ pip install requirements
+        $ pip install -r requirements.txt
         
 ### Training and Evaluating
 
