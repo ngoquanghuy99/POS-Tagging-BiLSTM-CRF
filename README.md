@@ -1,5 +1,3 @@
-***Note***: A standard dataset for POS tagging is the Wall Street Journal (WSJ) portion of the Penn Treebank, containing 45 different POS tags. Sections 0-18 are used for training, sections 19-21 for development, and sections 22-24 for testing. Models are evaluated based on accuracy. But I just own sections 2-21 (for training), i took 16% from it for development, and section 24 for testing. There's a little bit difference here but (I think) with this model, it would outperform SOTA results for POS tagging task (or nearly). The dataset is not public, contact me via email in case you want to use it.
-
 #### Table of contents
 1. [Introduction](#introduction)
 2. [Training procedure](#training)
@@ -83,3 +81,6 @@ Output:
         ('the', 'dt'), ('ghosts', 'nns'), ('that', 'wdt'), 
         ('haunt', 'vbp'), ('this', 'dt'), 
         ('room', 'nn'), ('.', '.')]
+        
+        
+***Note***: A standard dataset for POS tagging is the Wall Street Journal (WSJ) portion of the Penn Treebank, containing 45 different POS tags. Sections 0-18 are used for training, sections 19-21 for development, and sections 22-24 for testing. Models are evaluated based on accuracy. But I just own sections 2-21 (for training), i took 16% from it for development, and section 24 for testing. There's a little bit difference here but (I think) with this model, it would outperform SOTA results for POS tagging task (or nearly). The dataset is not public, contact me via email in case you want to use it.
